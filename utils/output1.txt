@@ -1,0 +1,51 @@
+1.) User Information:
+puneetbansal
+
+2.) Operating System type/brand:
+Linux puneetbansal 4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+
+3.) OS Distribution:
+Distributor ID:	Ubuntu
+
+4.) OS Version:
+Release:	18.04
+
+5.) Kernel Version
+4.15.0-43-generic
+
+6.) Kernel gcc build version and time:
+Linux version 4.15.0-43-generic (buildd@lgw01-amd64-001) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+
+7.) System Architecture Information:
+x86_64
+
+8.) Information on file system memory:
+Filesystem      Size  Used Avail Use% Mounted on
+udev            2.7G     0  2.7G   0% /dev
+tmpfs           531M  1.7M  530M   1% /run
+/dev/sda1        56G   22G   31G  42% /
+tmpfs           2.7G   60M  2.6G   3% /dev/shm
+tmpfs           5.3M  4.1k  5.3M   1% /run/lock
+tmpfs           2.7G     0  2.7G   0% /sys/fs/cgroup
+/dev/loop1      2.4M  2.4M     0 100% /snap/gnome-calculator/238
+/dev/loop0       45M   45M     0 100% /snap/gtk-common-themes/701
+/dev/loop2       16M   16M     0 100% /snap/gnome-logs/43
+/dev/loop3       14M   14M     0 100% /snap/gnome-characters/103
+/dev/loop5       16M   16M     0 100% /snap/gnome-logs/37
+/dev/loop4      2.5M  2.5M     0 100% /snap/gnome-calculator/180
+/dev/loop6       14M   14M     0 100% /snap/gnome-characters/124
+/dev/loop7      148M  148M     0 100% /snap/gnome-3-26-1604/70
+/dev/loop8      4.0M  4.0M     0 100% /snap/gnome-system-monitor/51
+/dev/loop9      4.0M  4.0M     0 100% /snap/gnome-system-monitor/57
+/dev/loop10      37M   37M     0 100% /snap/gtk-common-themes/818
+/dev/loop11      14M   14M     0 100% /snap/gnome-characters/139
+/dev/loop12      36M   36M     0 100% /snap/gtk-common-themes/808
+/dev/loop13     2.4M  2.4M     0 100% /snap/gnome-calculator/260
+/dev/loop14      93M   93M     0 100% /snap/core/5897
+/dev/loop15      94M   94M     0 100% /snap/core/6034
+/dev/loop16      94M   94M     0 100% /snap/core/6130
+/dev/loop17      16M   16M     0 100% /snap/gnome-logs/45
+/dev/loop18     148M  148M     0 100% /snap/gnome-3-26-1604/74
+tmpfs           531M   29k  531M   1% /run/user/121
+tmpfs           531M   50k  531M   1% /run/user/1000
+

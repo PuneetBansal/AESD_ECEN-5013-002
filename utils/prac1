@@ -1,0 +1,38 @@
+#!/bin/bash
+# Bash Script 
+echo "1.) User Information:" 
+whoami 
+echo "" 
+
+echo "2.) Operating System type/brand:"
+uname -a  
+echo ""
+
+echo "3.) OS Distribution:"		
+lsb_release -i  
+echo ""
+
+echo "4.) OS Version:"		
+lsb_release -r  
+echo ""
+
+echo "5.) Kernel Version"
+uname -r
+echo ""
+
+echo "6.) Kernel gcc build version and time:"
+cat /proc/version 
+echo ""
+
+echo "7.) System Architecture Information:" 
+uname -i 
+echo ""
+
+echo "8.) Information on file system memory:"
+df -H 
+echo ""
+
+
+
+
+
