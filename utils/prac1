@@ -1,5 +1,10 @@
 #!/bin/bash
-# Bash Script 
+
+# FILE NAME	:prac1.sh   
+# DESCRIPTION	:Using Bash script to collect system information
+# AUTHOR	:Puneet Bansal
+
+
 echo "1.) User Information:" 
 whoami 
 echo "" 

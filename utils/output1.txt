@@ -24,7 +24,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 udev            2.7G     0  2.7G   0% /dev
 tmpfs           531M  1.7M  530M   1% /run
 /dev/sda1        56G   22G   31G  42% /
-tmpfs           2.7G   60M  2.6G   3% /dev/shm
+tmpfs           2.7G   50M  2.7G   2% /dev/shm
 tmpfs           5.3M  4.1k  5.3M   1% /run/lock
 tmpfs           2.7G     0  2.7G   0% /sys/fs/cgroup
 /dev/loop1      2.4M  2.4M     0 100% /snap/gnome-calculator/238
@@ -47,5 +47,5 @@ tmpfs           2.7G     0  2.7G   0% /sys/fs/cgroup
 /dev/loop17      16M   16M     0 100% /snap/gnome-logs/45
 /dev/loop18     148M  148M     0 100% /snap/gnome-3-26-1604/74
 tmpfs           531M   29k  531M   1% /run/user/121
-tmpfs           531M   50k  531M   1% /run/user/1000
+tmpfs           531M   62k  531M   1% /run/user/1000
 
