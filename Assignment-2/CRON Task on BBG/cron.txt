@@ -1,0 +1,11 @@
+Steps to implement cron
+
+Run these commands
+->mkdir -p /var/spool/cron/crontab
+->crontab -e
+This opens a configuration file where we write the following command
+
+->*/10 * * * * /./sortapp >> /output_sort.txt 2>&1
+
+
+
