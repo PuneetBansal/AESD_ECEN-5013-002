@@ -1,0 +1,205 @@
+[S: 1551432138, ns: 7740332] Process1 created with PID: 17427
+IPC method being used is MESSAGE QUEUE 
+[S: 1551432143, ns: 7974935][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 1
+ LED:0
+}  
+[S: 1551432143, ns: 7992841][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 1
+ LED:1
+}
+[S: 1551432143, ns: 8219370][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 2
+ LED:0
+}  
+[S: 1551432143, ns: 8236028][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 2
+ LED:1
+}
+[S: 1551432143, ns: 8463479][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 3
+ LED:0
+}  
+[S: 1551432143, ns: 8480280][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 3
+ LED:1
+}
+[S: 1551432143, ns: 8708913][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 4
+ LED:0
+}  
+[S: 1551432143, ns: 8725655][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 4
+ LED:1
+}
+[S: 1551432143, ns: 8968051][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 5
+ LED:0
+}  
+[S: 1551432143, ns: 8984693][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 5
+ LED:1
+}
+[S: 1551432143, ns: 9213763][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 6
+ LED:0
+}  
+[S: 1551432143, ns: 9230264][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 6
+ LED:1
+}
+[S: 1551432143, ns: 9459193][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 7
+ LED:0
+}  
+[S: 1551432143, ns: 9475559][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 7
+ LED:1
+}
+[S: 1551432143, ns: 9709241][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 8
+ LED:0
+}  
+[S: 1551432143, ns: 9725954][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 8
+ LED:1
+}
+[S: 1551432143, ns: 9956253][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 9
+ LED:0
+}  
+[S: 1551432143, ns: 9972720][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 9
+ LED:1
+}
+[S: 1551432143, ns: 10204932][PROCESS 1] Message Received from PROCESS 2
+ {
+ Message:Process 2 Data 10
+ LED:0
+}  
+[S: 1551432143, ns: 10221389][PROCESS 1] Message Sent by PROCESS 1
+ {
+ Message:Process 1 Data 10
+ LED:1
+}
+
+
+[S: 1551432143, ns: 7829734] Process2 created with PID: 17428
+[S: 1551432143, ns: 7870494][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 1
+ LED:0
+}
+[S: 1551432143, ns: 8085134][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 1
+ LED:1
+}    
+[S: 1551432143, ns: 8102385][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 2
+ LED:0
+}
+[S: 1551432143, ns: 8338220][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 2
+ LED:1
+}    
+[S: 1551432143, ns: 8355178][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 3
+ LED:0
+}
+[S: 1551432143, ns: 8580403][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 3
+ LED:1
+}    
+[S: 1551432143, ns: 8597496][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 4
+ LED:0
+}
+[S: 1551432143, ns: 8826139][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 4
+ LED:1
+}    
+[S: 1551432143, ns: 8843482][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 5
+ LED:0
+}
+[S: 1551432143, ns: 9085867][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 5
+ LED:1
+}    
+[S: 1551432143, ns: 9102934][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 6
+ LED:0
+}
+[S: 1551432143, ns: 9330189][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 6
+ LED:1
+}    
+[S: 1551432143, ns: 9347285][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 7
+ LED:0
+}
+[S: 1551432143, ns: 9576103][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 7
+ LED:1
+}    
+[S: 1551432143, ns: 9593523][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 8
+ LED:0
+}
+[S: 1551432143, ns: 9828136][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 8
+ LED:1
+}    
+[S: 1551432143, ns: 9845151][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 9
+ LED:0
+}
+[S: 1551432143, ns: 10074666][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 9
+ LED:1
+}    
+[S: 1551432143, ns: 10091555][PROCESS 2] Message Sent by PROCESS 2
+ {
+ Message:Process 2 Data 10
+ LED:0
+}
+[S: 1551432143, ns: 10330226][PROCESS 2] Message Received from PROCESS 1
+ {
+ Message:Process 1 Data 10
+ LED:1
+}    
