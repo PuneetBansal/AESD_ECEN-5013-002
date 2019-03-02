@@ -15,6 +15,7 @@
 #include <stdbool.h>
 #include <signal.h>
 #include <time.h>
+
 typedef struct 
 {
 char string[20];
@@ -41,10 +42,9 @@ int main(int argc, char *argv[])
 	char *strarrParent[]={"Parent String 1","Parent String 2","Parent String 3","Parent String 4","Parent String 5","Parent String 6","Parent String 7","Parent String 8","Parent 		String 9","Parent String 10"};
 	strcpy(filename,argv[1]);	
 	signal(SIGINT,SIGINT_Handler);
-	//FILE *fptr_log;
 	fptr_log=fopen(argv[1],"a");
-	
-	fprintf(fptr_log,"Main thread created with PID: %d\n",getpid());
+	clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+	fprintf(fptr_log,"[S: %ld, ns: %ld] Main thread created with PID: %d\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec,getpid());
 	fprintf(fptr_log,"IPC method being used is PIPES \n");
 	
 	int pipe1[2]; /*To create reading and writing ends of pipe1*/	
@@ -73,10 +73,7 @@ int main(int argc, char *argv[])
 	else if (process > 0) 
     	{ 
         	pipetest sendObj,recObj;
-		
-		//strcpy(sendObj.string,"Sent from parent");
-		//sendObj.led=1; 
-          	close(pipe1[0]); /*Closing reading end of pipe1*/
+		close(pipe1[0]); /*Closing reading end of pipe1*/
 		close(pipe2[1]); // Close writing end of second pipe 
         	
 		/*Sending one message to child and receving a message from child. This process is repeated 10 times*/
@@ -87,7 +84,8 @@ int main(int argc, char *argv[])
 		write(pipe1[1], &sendObj, sizeof(sendObj)); 
         	//wait(NULL);
 		read(pipe2[0], &recObj, 100); 
-        	fprintf(fptr_log,"[parent process] Values read from child: \n string -> %s\n boolean value ->%d\n",recObj.string,recObj.led);
+		clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+        	fprintf(fptr_log,"[S: %ld, ns: %ld][Parent process] Values read from child: \n string -> %s\n boolean value ->%d\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec,recObj.string,recObj.led);
 		}
 	        
 		close(pipe1[1]);
@@ -107,7 +105,8 @@ else
 	strcpy(so.string,strarrChild[i]);
 	so.led=0;
         read(pipe1[0], &ro, sizeof(ro)); // Read a structure using first pipe 
-  	fprintf(fptr_log,"[child process] Value read from parent :\n string->%s \n boolean value ->%d\n",ro.string,ro.led);
+	clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+  	fprintf(fptr_log,"[S: %ld, ns: %ld][Child process] Value read from parent :\n string->%s \n boolean value ->%d\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec,ro.string,ro.led);
       	
  	write(pipe2[1], &so, sizeof(so));// Write the structure using second pipe.
         }

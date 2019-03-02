@@ -1,0 +1,64 @@
+[S: 1551486039, ns: 47863436] Main thread created with PID: 4133
+IPC method being used is PIPES 
+[S: 1551486039, ns: 48099660][Child process] Value read from parent :
+ string->Parent String 1 
+ boolean value ->1
+[S: 1551486039, ns: 48585781][Child process] Value read from parent :
+ string->Parent String 2 
+ boolean value ->1
+[S: 1551486039, ns: 48781183][Child process] Value read from parent :
+ string->Parent String 3 
+ boolean value ->1
+[S: 1551486039, ns: 49164525][Child process] Value read from parent :
+ string->Parent String 4 
+ boolean value ->1
+[S: 1551486039, ns: 49395497][Child process] Value read from parent :
+ string->Parent String 5 
+ boolean value ->1
+[S: 1551486039, ns: 49601406][Child process] Value read from parent :
+ string->Parent String 6 
+ boolean value ->1
+[S: 1551486039, ns: 49815043][Child process] Value read from parent :
+ string->Parent String 7 
+ boolean value ->1
+[S: 1551486039, ns: 50028177][Child process] Value read from parent :
+ string->Parent String 8 
+ boolean value ->1
+[S: 1551486039, ns: 50253928][Child process] Value read from parent :
+ string->Parent 		String 9 
+ boolean value ->1
+[S: 1551486039, ns: 50460913][Child process] Value read from parent :
+ string->Parent String 10 
+ boolean value ->1
+[S: 1551486039, ns: 47863436] Main thread created with PID: 4133
+IPC method being used is PIPES 
+[S: 1551486039, ns: 48209748][Parent process] Values read from child: 
+ string -> Child String 1
+ boolean value ->0
+[S: 1551486039, ns: 48683580][Parent process] Values read from child: 
+ string -> Child String 2
+ boolean value ->0
+[S: 1551486039, ns: 48877955][Parent process] Values read from child: 
+ string -> Child String 3
+ boolean value ->0
+[S: 1551486039, ns: 49294359][Parent process] Values read from child: 
+ string -> Child String 4
+ boolean value ->0
+[S: 1551486039, ns: 49497199][Parent process] Values read from child: 
+ string -> Child String 5
+ boolean value ->0
+[S: 1551486039, ns: 49705678][Parent process] Values read from child: 
+ string -> Child String 6
+ boolean value ->0
+[S: 1551486039, ns: 49923665][Parent process] Values read from child: 
+ string -> Child String 7
+ boolean value ->0
+[S: 1551486039, ns: 50131574][Parent process] Values read from child: 
+ string -> Child String 8
+ boolean value ->0
+[S: 1551486039, ns: 50357904][Parent process] Values read from child: 
+ string -> Child String 		9
+ boolean value ->0
+[S: 1551486039, ns: 50577365][Parent process] Values read from child: 
+ string -> Child String 10
+ boolean value ->0

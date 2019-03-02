@@ -1,3 +1,8 @@
+/*
+*@filename	: sm1.c
+*author		: Puneet Bansal
+*description	: Enabling shared memory IPC between a 2 processes by sending 10 messages back and forth.
+*/
 #include <string.h>
 #include <stdint.h>
 #include <pthread.h>
