@@ -13,22 +13,38 @@
 #include <sys/wait.h> 
 #include <string.h>
 #include <stdbool.h>
+#include <signal.h>
+#include <time.h>
 typedef struct 
 {
 char string[20];
 bool led;
 }pipetest;
 
+char filename[30];
+FILE *fptr_log;
+struct timespec thTimeSpec;
+
+static void SIGINT_Handler(int x)
+{
+fptr_log=fopen(filename,"a");
+printf("\nReceived sigint");
+clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+fprintf(fptr_log,"\n[S: %ld, ns: %ld] SIGINT received\n -> Now Freeing Resources\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec);
+fclose(fptr_log);
+exit(0);
+}
+
 int main(int argc, char *argv[])
 {
 	int i;	
 	char *strarrParent[]={"Parent String 1","Parent String 2","Parent String 3","Parent String 4","Parent String 5","Parent String 6","Parent String 7","Parent String 8","Parent 		String 9","Parent String 10"};
-		
-	
-	FILE *fptr_log;
+	strcpy(filename,argv[1]);	
+	signal(SIGINT,SIGINT_Handler);
+	//FILE *fptr_log;
 	fptr_log=fopen(argv[1],"a");
 	
-	fprintf(fptr_log,"Main thread created with: %d and TID: %d and POSIX thread id: %ld\n",getpid(),(pid_t)syscall(SYS_gettid),pthread_self());
+	fprintf(fptr_log,"Main thread created with PID: %d\n",getpid());
 	fprintf(fptr_log,"IPC method being used is PIPES \n");
 	
 	int pipe1[2]; /*To create reading and writing ends of pipe1*/	

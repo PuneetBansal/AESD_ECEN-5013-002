@@ -1,0 +1,222 @@
+[S: 1551485153, ns: 372757321] Served created with PID: 3887
+IPC method being used is SOCKETS 
+[Server] Socket Created Successfully
+[Server] Socket binded Successfully
+[S: 1551485161, ns: 376910312][Server] Size of incoming payload: 21
+[S: 1551485161, ns: 376915975][Server] Message Received from Client
+ {
+ Message:Message 1 from Clien
+ USRLED:1
+}
+[S: 1551485162, ns: 377642882][Server] Size of incoming payload: 21
+[S: 1551485162, ns: 377659263][Server] Message Received from Client
+ {
+ Message:Message 2 from Clien
+ USRLED:1
+}
+[S: 1551485163, ns: 378827334][Server] Size of incoming payload: 21
+[S: 1551485163, ns: 378833724][Server] Message Received from Client
+ {
+ Message:Message 3 from Clien
+ USRLED:1
+}
+[S: 1551485164, ns: 379433884][Server] Size of incoming payload: 21
+[S: 1551485164, ns: 379441176][Server] Message Received from Client
+ {
+ Message:Message 4 from Clien
+ USRLED:1
+}
+[S: 1551485165, ns: 412655362][Server] Size of incoming payload: 21
+[S: 1551485165, ns: 412669588][Server] Message Received from Client
+ {
+ Message:Message 5 from Clien
+ USRLED:1
+}
+[S: 1551485166, ns: 413163205][Server] Size of incoming payload: 21
+[S: 1551485166, ns: 413179045][Server] Message Received from Client
+ {
+ Message:Message 6 from Clien
+ USRLED:1
+}
+[S: 1551485167, ns: 415063436][Server] Size of incoming payload: 21
+[S: 1551485167, ns: 415068970][Server] Message Received from Client
+ {
+ Message:Message 7 from Clien
+ USRLED:1
+}
+[S: 1551485168, ns: 418307957][Server] Size of incoming payload: 21
+[S: 1551485168, ns: 418323324][Server] Message Received from Client
+ {
+ Message:Message 8 from Clien
+ USRLED:1
+}
+[S: 1551485169, ns: 419562344][Server] Size of incoming payload: 21
+[S: 1551485169, ns: 419577960][Server] Message Received from Client
+ {
+ Message:Message 9 from Clien
+ USRLED:1
+}
+[S: 1551485170, ns: 420821787][Server] Size of incoming payload: 21
+[S: 1551485170, ns: 420826759][Server] Message Received from Client
+ {
+ Message:Message 10 from Clie
+ USRLED:1
+}
+[S: 1551485170, ns: 420853788][Server] Message sent from Server
+{
+ Message: Message 1 from Serve
+ LED: 0
+}
+[S: 1551485171, ns: 422212531][Server] Message sent from Server
+{
+ Message: Message 2 from Serve
+ LED: 0
+}
+[S: 1551485172, ns: 423472882][Server] Message sent from Server
+{
+ Message: Message 3 from Serve
+ LED: 0
+}
+[S: 1551485173, ns: 426488572][Server] Message sent from Server
+{
+ Message: Message 4 from Serve
+ LED: 0
+}
+[S: 1551485174, ns: 427190182][Server] Message sent from Server
+{
+ Message: Message 5 from Serve
+ LED: 0
+}
+[S: 1551485175, ns: 427552503][Server] Message sent from Server
+{
+ Message: Message 6 from Serve
+ LED: 0
+}
+[S: 1551485176, ns: 430733352][Server] Message sent from Server
+{
+ Message: Message 7 from Serve
+ LED: 0
+}
+[S: 1551485177, ns: 432162093][Server] Message sent from Server
+{
+ Message: Message 8 from Serve
+ LED: 0
+}
+[S: 1551485178, ns: 433332443][Server] Message sent from Server
+{
+ Message: Message 9 from Serve
+ LED: 0
+}
+[S: 1551485179, ns: 471164619][Server] Message sent from Server
+{
+ Message: Message 10 from Serv
+ LED: 0
+}
+[S: 1551485161, ns: 376766699] Client file created with PID: 3889
+IPC method being used is SOCKET 
+[Client] Socket Created Successfully
+[Client] Message sent from Client
+{
+ Message: Message 1 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 2 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 3 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 4 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 5 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 6 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 7 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 8 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 9 from Clien
+ LED: 1
+}
+[Client] Message sent from Client
+{
+ Message: Message 10 from Cliet
+ LED: 1
+}
+[S: 1551485171, ns: 422255094][Client] Size of incoming payload: 21
+[S: 1551485171, ns: 422265741][Client] Message Received from Server
+ {
+ Message:Message 1 from Serve
+ USRLED:0
+}
+[S: 1551485172, ns: 423510145][Client] Size of incoming payload: 21
+[S: 1551485172, ns: 423525314][Client] Message Received from Server
+ {
+ Message:Message 3 from Serve
+ USRLED:0
+}
+[S: 1551485173, ns: 426524954][Client] Size of incoming payload: 21
+[S: 1551485173, ns: 426540268][Client] Message Received from Server
+ {
+ Message:Message 4 from Serve
+ USRLED:0
+}
+[S: 1551485174, ns: 427222551][Client] Size of incoming payload: 21
+[S: 1551485174, ns: 427236099][Client] Message Received from Server
+ {
+ Message:Message 5 from Serve
+ USRLED:0
+}
+[S: 1551485175, ns: 427587723][Client] Size of incoming payload: 21
+[S: 1551485175, ns: 427603449][Client] Message Received from Server
+ {
+ Message:Message 6 from Serve
+ USRLED:0
+}
+[S: 1551485176, ns: 430770216][Client] Size of incoming payload: 21
+[S: 1551485176, ns: 430900528][Client] Message Received from Server
+ {
+ Message:Message 7 from Serve
+ USRLED:0
+}
+[S: 1551485177, ns: 432361896][Client] Size of incoming payload: 21
+[S: 1551485177, ns: 432377596][Client] Message Received from Server
+ {
+ Message:Message 8 from Serve
+ USRLED:0
+}
+[S: 1551485178, ns: 433351613][Client] Size of incoming payload: 21
+[S: 1551485178, ns: 433359947][Client] Message Received from Server
+ {
+ Message:Message 9 from Serve
+ USRLED:0
+}
+[S: 1551485179, ns: 471199978][Client] Size of incoming payload: 21
+[S: 1551485179, ns: 471213943][Client] Message Received from Server
+ {
+ Message:Message 10 from Serv
+ USRLED:0
+}
+[Client] [ERROR] Invalid data

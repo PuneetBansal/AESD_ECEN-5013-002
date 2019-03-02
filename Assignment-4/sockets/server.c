@@ -19,10 +19,24 @@
 #include <sys/timeb.h>
 #include <pthread.h>
 #include <time.h>
+#include <signal.h>
 
 
 #define PORT_ADR 8000
 struct timespec thTimeSpec;
+char filename[30];
+
+FILE *fptr_log;
+
+static void SIGINT_Handler(int x)
+{
+fptr_log=fopen(filename,"a");
+printf("\nReceived sigint");
+clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+fprintf(fptr_log,"\n[S: %ld, ns: %ld] SIGINT received\n -> Now Freeing Resources\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec);
+fclose(fptr_log);
+exit(0);
+}
 
 typedef struct
 {
@@ -34,8 +48,9 @@ typedef struct
 int main(int argc, char *argv[])
 {
   char *arrServer[]={"Message 1 from Server","Message 2 from Server","Message 3 from Server","Message 4 from Server","Message 5 from Server","Message 6 from Server","Message 7 from Server","Message 8 from Server","Message 9 from Server","Message 10 from Server"};
-
-  FILE *fptr_log;
+  signal(SIGINT,SIGINT_Handler);
+  //FILE *fptr_log;
+  strcpy(filename,argv[1]);
   fptr_log=fopen(argv[1],"a");
   clock_gettime(CLOCK_REALTIME, &thTimeSpec);
   fprintf(fptr_log,"[S: %ld, ns: %ld] Served created with PID: %d\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec,getpid());

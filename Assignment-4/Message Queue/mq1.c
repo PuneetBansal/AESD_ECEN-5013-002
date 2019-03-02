@@ -17,9 +17,24 @@
 #include <errno.h>
 #include <stdbool.h>
 #include <time.h>
+#include <signal.h>
 
 #define QUEUENAME "/punsqueue"
 #define MAX_SIZE 10
+
+char filename[30];
+FILE *fptr_log;
+
+struct timespec thTimeSpec;
+static void SIGINT_Handler(int x)
+{
+fptr_log=fopen(filename,"a");
+printf("\nReceived sigint");
+clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+fprintf(fptr_log,"\n[S: %ld, ns: %ld] SIGINT received\n -> Now Freeing Resources\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec);
+fclose(fptr_log);
+exit(0);
+}
 
 typedef struct
 {
@@ -27,12 +42,13 @@ typedef struct
 	bool led;
 }messageQueue;
 
-struct timespec thTimeSpec;
+
+
 
 int main(int argc, char *argv[])
 {
- FILE *fptr_log;
  fptr_log=fopen(argv[1],"a");
+ signal(SIGINT,SIGINT_Handler);
  clock_gettime(CLOCK_REALTIME, &thTimeSpec);
  fprintf(fptr_log,"[S: %ld, ns: %ld] Process1 created with PID: %d\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec,getpid());
  fprintf(fptr_log,"IPC method being used is MESSAGE QUEUE \n");

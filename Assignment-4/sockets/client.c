@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <sys/socket.h>
 #include <time.h>
+#include <signal.h>
 
 
 #define PORT_ADR    8000
@@ -26,11 +27,27 @@ typedef struct
   bool    led;
 }socketTest;
 
+char filename[30];
+
+FILE *fptr_log;
+int sigint;
 struct timespec thTimeSpec;
-int main(int argc, char *argv[])
+
+static void SIGINT_Handler(int x)
 {
-  FILE *fptr_log;
+fptr_log=fopen(filename,"a");
+printf("\nReceived sigint");
+clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+fprintf(fptr_log,"\n[S: %ld, ns: %ld] SIGINT received\n -> Now Freeing Resources\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec);
+fclose(fptr_log);
+exit(0);
+}
+
+
+int main(int argc, char *argv[])
+{  
   fptr_log=fopen(argv[1],"a");
+  strcpy(filename,argv[1]);
   char *arrClient[]={"Message 1 from Client","Message 2 from Client","Message 3 from Client","Message 4 from Client","Message 5 from Client","Message 6 from Client","Message 7 from Client","Message 8 from Client","Message 9 from Client","Message 10 from Client"}	;
   clock_gettime(CLOCK_REALTIME, &thTimeSpec);
   
@@ -49,6 +66,7 @@ int main(int argc, char *argv[])
   socketTest payload,payloadRead;
   socketTest *payloadptr;
   char r_data[4] = {0};
+  signal(SIGINT,SIGINT_Handler);
 
   /* create socket */
   if ((client_socket = socket(AF_INET, SOCK_STREAM, 0)) < 0)
@@ -138,7 +156,6 @@ while(k<10)
   fprintf(fptr_log,"[S: %ld, ns: %ld][Client] Message Received from Server\n {\n Message:%s\n USRLED:%d\n}\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec,payloadptr->string, payloadptr->led);
   k++;
 }
-
 
   fclose(fptr_log);
   /* close socket */ 

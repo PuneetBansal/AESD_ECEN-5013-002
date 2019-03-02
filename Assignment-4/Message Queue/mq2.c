@@ -17,6 +17,7 @@
 #include <errno.h>
 #include <time.h>
 #include <stdbool.h>
+#include <signal.h>
 
 #define QUEUENAME "/punsqueue"
 #define MAX_SIZE 10
@@ -30,11 +31,28 @@ typedef struct
 
 struct timespec thTimeSpec;
 
+
+char filename[30];
+FILE *fptr_log;
+
+
+static void SIGINT_Handler(int x)
+{
+fptr_log=fopen(filename,"a");
+printf("\nReceived sigint");
+
+clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+fprintf(fptr_log,"\n[S: %ld, ns: %ld] SIGINT received\n -> Now Freeing Resources\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec);
+fclose(fptr_log);
+exit(0);
+}
+
+
 int main(int argc, char *argv[])
 {
- FILE *fptr_log;
  fptr_log=fopen(argv[1],"a");
  clock_gettime(CLOCK_REALTIME, &thTimeSpec);
+ signal(SIGINT,SIGINT_Handler);
  fprintf(fptr_log,"\n\n[S: %ld, ns: %ld] Process2 created with PID: %d\n",thTimeSpec.tv_sec,thTimeSpec.tv_nsec,getpid());
  char *process2Data[]={"Process 2 Data 1","Process 2 Data 2","Process 2 Data 3","Process 2 Data 4","Process 2 Data 5","Process 2 Data 6","Process 2 Data 7","Process 2 Data 8","Process 2 Data 9","Process 2 Data 10"};
 
